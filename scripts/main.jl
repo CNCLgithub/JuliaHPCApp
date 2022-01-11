@@ -1,8 +1,8 @@
 using JuliaHPCApp
 
-function main::CInt
+function main()::Cint
     try
-        JuliaHPCApp.greeting()
+        JuliaHPCApp.greet()
     catch
         Base.invokelatest(Base.display_error, Base.catch_stack())
         return 1
@@ -11,5 +11,5 @@ function main::CInt
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
-    real_main()
+    main()
 end
